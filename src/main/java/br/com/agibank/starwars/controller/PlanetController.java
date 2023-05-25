@@ -4,6 +4,8 @@ import br.com.agibank.starwars.controller.request.PlanetRequest;
 import br.com.agibank.starwars.controller.request.PlanetUpdateRequest;
 import br.com.agibank.starwars.controller.response.PlanetResponse;
 import br.com.agibank.starwars.service.PlanetService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Api(value = "Gerenciamento de planetas", description = "Requisições de GET, PUT, POST, DELETE relacionadas aos planetas da API Starwars")
 @Slf4j
 @Controller
 @RestController
@@ -28,6 +31,7 @@ public class PlanetController {
         return planetService.getPlanets();
     }
 
+    @ApiOperation(value = "Obter planetas por @Id")
     @GetMapping("{id}")
     public PlanetResponse getPlanetById(@PathVariable("id") String id) {
         return planetService.getPlanetById(id);
