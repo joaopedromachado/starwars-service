@@ -2,14 +2,16 @@ package br.com.agibank.starwars.controller.response;
 
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 @Data
 public class PlanetResponse {
 
     private String id;
     private String climate;
-    private String created;
+    private LocalDateTime created;
     private String diameter;
-    private String edited;
+    private LocalDateTime edited;
     private String gravity;
     private String name;
     private String orbitalPeriod;
