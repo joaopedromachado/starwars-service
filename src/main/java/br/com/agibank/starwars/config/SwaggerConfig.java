@@ -1,4 +1,4 @@
-package br.com.agibank.starwars.configurations;
+package br.com.agibank.starwars.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
